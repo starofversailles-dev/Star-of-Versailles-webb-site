@@ -1,0 +1,11 @@
+.page-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+.info-block { padding:30px; border:1px solid var(--line); border-radius:18px; background:#fff; box-shadow:0 10px 35px rgba(34,78,96,.05); }
+.info-block h2, .info-block h3 { margin-top:0; }
+.check-list { margin:18px 0 0; padding:0; list-style:none; display:grid; gap:10px; }
+.check-list li { position:relative; padding-left:26px; color:var(--muted); }
+.check-list li::before { content:"✓"; position:absolute; left:0; color:var(--gold); font-weight:800; }
+.projects-placeholder { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+.project-card { min-height:320px; border-radius:18px; padding:28px; display:flex; align-items:flex-end; color:#fff; background:linear-gradient(135deg,#173541,#6f9eae 52%,#d9bb80); }
+.project-card h3 { color:#fff; margin:0; }
+.contact-details { display:grid; gap:14px; margin-top:24px; }
+.contact-row { padding:18px; border:1px solid var(--line); border-radius:12px; background:#fff; }
