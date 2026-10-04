@@ -11,12 +11,24 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('/index.html',{cache:'no-store'});
+    const response=await fetch('/index.html?v=landscape-fix-2',{cache:'no-store'});
     if(!response.ok) throw new Error('Unable to load site');
     let html=await response.text();
-    const darkHero='background-image:linear-gradient(90deg,rgba(18,13,9,.72) 0%,rgba(18,13,9,.42) 37%,rgba(18,13,9,.05) 67%),url(';
-    if(!html.includes(darkHero)) throw new Error('Hero overlay not found');
-    html=html.replace(darkHero,'background-image:url(');
+
+    const landscapeFix=`<style id="landscape-hero-fix">
+    @media (orientation: landscape), (min-aspect-ratio: 1/1) {
+      .hero {
+        background-image:
+          linear-gradient(90deg,rgba(18,13,9,.76) 0%,rgba(18,13,9,.43) 38%,rgba(18,13,9,.08) 72%),
+          url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Palace_of_Versailles_Hall_of_Mirrors_%2828354739025%29.jpg/1280px-Palace_of_Versailles_Hall_of_Mirrors_%2828354739025%29.jpg') !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+    }
+    </style>`;
+
+    html=html.replace('</head>',landscapeFix+'</head>');
     document.open();
     document.write(html);
     document.close();
