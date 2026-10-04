@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Elegant architectural interior illustration</title><desc id="desc">Clean decorative architectural scene used as the homepage hero background.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf6eb"/><stop offset=".55" stop-color="#efe5d2"/><stop offset="1" stop-color="#e4d3b4"/></linearGradient>
+<linearGradient id="sun" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fffdf7"/><stop offset="1" stop-color="#f2d7a4"/></linearGradient>
+<linearGradient id="stone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#d9c8aa"/></linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<rect y="675" width="1200" height="225" fill="#d8c19a"/>
+<g opacity=".92">
+<path d="M110 680V170h170v510" fill="url(#stone)"/><path d="M920 680V170h170v510" fill="url(#stone)"/>
+<path d="M80 175h230v34H80zm810 0h230v34H890z" fill="#b9985b"/>
+<path d="M138 212h114v468H138zm810 0h114v468H948z" fill="#f7eddc"/>
+<path d="M160 230h16v430h-16zm54 0h16v430h-16zm810 0h16v430h-16zm-54 0h16v430h-16z" fill="#c3a46f" opacity=".75"/>
+</g>
+<g>
+<path d="M350 680V250c0-145 110-225 250-225s250 80 250 225v430" fill="#f8efe0"/>
+<path d="M390 680V270c0-112 90-177 210-177s210 65 210 177v410" fill="url(#sun)"/>
+<path d="M450 680V300c0-78 65-127 150-127s150 49 150 127v380" fill="#fefbf3"/>
+<path d="M595 100h10v580h-10" fill="#b79860" opacity=".55"/>
+</g>
+<g fill="none" stroke="#b99658" stroke-width="5" opacity=".7">
+<path d="M415 270c0-103 82-164 185-164s185 61 185 164"/><path d="M475 300c0-68 54-112 125-112s125 44 125 112"/>
+</g>
+<g opacity=".78">
+<path d="M235 680l145-90h440l145 90z" fill="#f8f1e5"/>
+<path d="M295 680l115-63h380l115 63z" fill="#c9ac76"/>
+<path d="M358 680l80-38h324l80 38z" fill="#fffaf0"/>
+</g>
+<g fill="#aa8647">
+<circle cx="470" cy="360" r="12"/><circle cx="730" cy="360" r="12"/>
+<path d="M465 372h10v190h-10zm260 0h10v190h-10z"/>
+</g>
+<g fill="#fff7e8" stroke="#b99658" stroke-width="5">
+<path d="M430 562h80v118h-80zM690 562h80v118h-80z"/>
+</g>
+<g opacity=".55" fill="#fff">
+<path d="M440 700h320l120 110H320z"/>
+</g>
+</svg>
