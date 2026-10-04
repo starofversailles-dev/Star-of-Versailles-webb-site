@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,29 +11,36 @@
 <script>
 (async()=>{
   try{
-    const response=await fetch('/index.html?v=landscape-fix-2',{cache:'no-store'});
+    const response=await fetch('/index.html?v=hero-clean-4',{cache:'no-store'});
     if(!response.ok) throw new Error('Unable to load site');
     let html=await response.text();
 
-    const landscapeFix=`<style id="landscape-hero-fix">
-    @media (orientation: landscape), (min-aspect-ratio: 1/1) {
+    const cleanHero=`<style id="clean-hero-fix">
       .hero {
+        background-color:#17130f !important;
         background-image:
-          linear-gradient(90deg,rgba(18,13,9,.76) 0%,rgba(18,13,9,.43) 38%,rgba(18,13,9,.08) 72%),
-          url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Palace_of_Versailles_Hall_of_Mirrors_%2828354739025%29.jpg/1280px-Palace_of_Versailles_Hall_of_Mirrors_%2828354739025%29.jpg') !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
+          linear-gradient(90deg,rgba(18,13,9,.72) 0%,rgba(18,13,9,.40) 38%,rgba(18,13,9,.04) 72%),
+          url('https://upload.wikimedia.org/wikipedia/commons/c/c0/Palace_of_Versailles_Hall_of_Mirrors_%2828354739025%29.jpg') !important;
+        background-size:cover !important;
+        background-position:center center !important;
+        background-repeat:no-repeat !important;
       }
-    }
+      .hero::before,.hero::after {
+        content:none !important;
+        display:none !important;
+        background:none !important;
+      }
+      @media (max-width:900px) {
+        .hero { background-position:62% center !important; }
+      }
     </style>`;
 
-    html=html.replace('</head>',landscapeFix+'</head>');
+    html=html.replace('</head>',cleanHero+'</head>');
     document.open();
     document.write(html);
     document.close();
   }catch(error){
-    location.replace('/index.html');
+    location.replace('/index.html?v=hero-clean-4');
   }
 })();
 </script>
