@@ -1,0 +1,1 @@
+const m=document.getElementById('menu');const mob=document.getElementById('mob');if(m&&mob){mob.onclick=()=>m.classList.toggle('open');m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('open'));}
